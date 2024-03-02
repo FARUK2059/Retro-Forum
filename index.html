@@ -9,10 +9,88 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font-awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
 </head>
 <body>
-    <section>
-        <h2 class=" text-blue-500 text-7xl"> amar sunar bangla</h2>
-    </section>
+    
+    <!-- header section -->
+    <header class="container mx-auto font-mulish  mt-6 p-8">
+       <div>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <a class="btn btn-ghost text-4xl font-black text-[#12132D]">ReTro</a>
+                </div>
+                <div >
+                    <div class="tooltip" data-tip="Home">
+                        <span><i class="fa-solid fa-house bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <div class="tooltip" data-tip="pen">
+                        <span><i class="fa-solid fa-pen bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <div class="tooltip" data-tip="User">
+                        <span><i class="fa-solid fa-user-plus bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <div class="tooltip" data-tip="Flag">
+                        <span><i class="fa-regular fa-flag bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <button class="btn btn-active btn-primary m-3 rounded-full text-[20px] font-bold">Sign In</button>
+                </div>
+                
+            </div>
+       </div>
+    </header>
+
+    <!-- main section -->
+    <main class="container mx-auto font-mulish  p-8">
+
+        <!--header Banner section  -->
+        <section>
+            <div class=" ">
+                <div class=" card w-auto   image-full flex flex-col items-center  bg-[#12132D]">
+                    <figure><img class=" lg:w-full " src="./images/bgbanner.png" alt="Shoes" /></figure>
+                    <div class="grid lg:grid-cols-2">
+                        <div class="leading-5 p-10 grid items-center justify-center ">
+                            <h1 class="font-black text-6xl text-[#FFFFFF] ">Welcome to the <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
+                            <p class="text-[#FFFFFFCC]"> give your favorite talk to about your self , <br> you can understand </p>
+                            <div class="flex ">
+                                <input type="text" placeholder="Type here" class="input input-ghost w-full relative max-w-xs bg-white rounded-full" />
+                                <button class="btn btn-primary rounded-full absolute text-white font-medium ml-60">Search</button>
+                            </div>
+                        </div>
+                        <div class=" bg-[#FFFFFF] rounded-3xl m-16 p-10">
+                            <div class="flex justify-between text-2xl font-medium text-[#12132DCC] p-2">
+                                <h1> Registered Users</h1>
+                                <h1>01</h1>
+                            </div>
+                            <div class="flex justify-between text-2xl font-medium text-[#12132DCC] p-2">
+                                <h1> Forum</h1>
+                                <h1>05</h1>
+                            </div>
+                            <div class="flex justify-between text-2xl font-medium text-[#12132DCC] p-2">
+                                <h1> Topics</h1>
+                                <h1>01</h1>
+                            </div>
+                            <div class="flex justify-between text-2xl font-medium text-[#12132DCC] p-2">
+                                <h1> Replies</h1>
+                                <h1>01</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+            </div>
+        </section>
+
+    </main>
+    
+
+    
+    <script src="./Retro-forum.js"></script>
 </body>
 </html>
