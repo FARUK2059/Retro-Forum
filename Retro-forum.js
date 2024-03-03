@@ -15,7 +15,7 @@ const displayRetro = (reTro) => {
         const reTroDiscuss = document.getElementById('discussContainer');
 
         reTro.forEach ( reTroAll => {
-            console.log(reTroAll);
+            // console.log(reTroAll);
 
             // step 2 : Creat a new div
             const discussCard = document.createElement('div');
@@ -28,8 +28,8 @@ const displayRetro = (reTro) => {
                               <div class="grid lg:grid-cols-5 gap-4">
                                 <div> 
                                     <div class="indicator">
-                                        <span class="indicator-item badge badge-secondary bg-red-800 "></span> 
-                                        <div class="grid w-32 h-32 bg-base-300 place-items-center rounded-xl">${reTroAll.image}</div>
+                                        <span class="indicator-item badge badge-secondary ">  </span> 
+                                        <div class="grid w-32 h-32 bg-base-300 place-items-center  rounded-xl">  <img src="${reTroAll.image}" alt=""></div>
                                     </div>
                                 </div>
                                 <div class="grid lg:col-span-4">
@@ -58,7 +58,7 @@ const displayRetro = (reTro) => {
                                             </div>
                                         </div>
                                         <div>
-                                            <button class="btn rounded-full"><img src="./images/Mail icon.png" alt=""></button>
+                                            <button onclick ="play()" class="btn rounded-full"><img src="./images/Mail icon.png" alt=""></button>
                                         </div>
                                     </div>
     
@@ -74,7 +74,10 @@ const displayRetro = (reTro) => {
             reTroDiscuss.appendChild(discussCard);
 
 
+
         })
 }
+
+
 
 loadRetro ();
