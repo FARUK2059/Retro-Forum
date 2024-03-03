@@ -16,7 +16,7 @@ const displayRetro = (reTro) => {
 
 
         reTro.forEach ( reTroAll => {
-            // console.log(reTroAll);
+            console.log(reTroAll);
 
             // step 2 : Creat a new div
             const discussCard = document.createElement('div');
@@ -29,7 +29,7 @@ const displayRetro = (reTro) => {
                               <div class="grid lg:grid-cols-5 gap-4">
                                 <div> 
                                     <div class="indicator">
-                                        <span class="indicator-item badge badge-secondary  ">  </span> 
+                                        <span class="indicator-item badge badge-secondary ${reTroAll.isActive?  "bg-green-800" : "bg-red-800" } ">  </span> 
                                         <div class="grid w-32 h-32 bg-base-300 place-items-center  rounded-xl">  <img src="${reTroAll.image}" alt=""></div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ const displayRetro = (reTro) => {
                                             </div>
                                         </div>
                                         <div>
-                                            <button onclick ="play()" class="btn rounded-full"><img src="./images/Mail icon.png" alt=""></button>
+                                            <button onclick ="play('${reTroAll.title}','${reTroAll.view_count}')" class="btn rounded-full"><img src="./images/Mail icon.png" alt=""></button>
                                         </div>
                                     </div>
     
@@ -80,8 +80,8 @@ const displayRetro = (reTro) => {
 
 // count section
 let clickItem = 0;
-const play = (reTro) =>{
-// console.log(reTro);
+const play = (title, view) =>{
+console.log(title, view);
 clickItem++;
 document.getElementById('click-count').innerText = clickItem;
 
@@ -91,11 +91,11 @@ const newDiv = document.createElement('div');
 newDiv.classList = ` flex justify-between p-6 bg-[#FFFFFF] rounded-2xl mt-4 `;
 newDiv.innerHTML = ` 
     <div class="">
-        <h1 class="text-[#12132D] font-semibold "> title ekane lekte hobe </h1>
+        <h1 class="text-[#12132D] font-semibold "> ${title} </h1>
     </div>
     <div class=" flex text-[#12132D99]">
         <span><img class="mr-4" src="./images/Group 16.png" alt=""></span>
-        <p> 554 </p>
+        <p> ${view} </p>
     </div>
 `;
 
