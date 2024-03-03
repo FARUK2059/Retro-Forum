@@ -15,7 +15,7 @@ const displaylatestPost = (reTroLetestPost) => {
     const reTroPost = document.getElementById('letestPost');
 
     reTroLetestPost.forEach ( letestPost => {
-        console.log(letestPost);
+        // console.log(letestPost);
 
         //  Step 2 : creat a new post div
         const postCard = document.createElement('div');

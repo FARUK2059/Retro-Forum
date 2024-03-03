@@ -9,10 +9,11 @@ const loadRetro = async ( ) => {
 }
 
 const displayRetro = (reTro) => {
-        // console.log(reTro);
+        console.log(reTro);
 
         // step 1 : Link ID
         const reTroDiscuss = document.getElementById('discussContainer');
+
 
         reTro.forEach ( reTroAll => {
             // console.log(reTroAll);
@@ -28,7 +29,7 @@ const displayRetro = (reTro) => {
                               <div class="grid lg:grid-cols-5 gap-4">
                                 <div> 
                                     <div class="indicator">
-                                        <span class="indicator-item badge badge-secondary ">  </span> 
+                                        <span class="indicator-item badge badge-secondary  ">  </span> 
                                         <div class="grid w-32 h-32 bg-base-300 place-items-center  rounded-xl">  <img src="${reTroAll.image}" alt=""></div>
                                     </div>
                                 </div>
@@ -73,11 +74,33 @@ const displayRetro = (reTro) => {
             // step 4 : set append child
             reTroDiscuss.appendChild(discussCard);
 
+        });
 
+};
 
-        })
-}
+// count section
+let clickItem = 0;
+const play = (reTro) =>{
+// console.log(reTro);
+clickItem++;
+document.getElementById('click-count').innerText = clickItem;
 
+// title count
+const titleCount = document.getElementById('right-grid-Child');
+const newDiv = document.createElement('div');
+newDiv.classList = ` flex justify-between p-6 bg-[#FFFFFF] rounded-2xl mt-4 `;
+newDiv.innerHTML = ` 
+    <div class="">
+        <h1 class="text-[#12132D] font-semibold "> title ekane lekte hobe </h1>
+    </div>
+    <div class=" flex text-[#12132D99]">
+        <span><img class="mr-4" src="./images/Group 16.png" alt=""></span>
+        <p> 554 </p>
+    </div>
+`;
 
+titleCount.appendChild(newDiv);
+
+};
 
 loadRetro ();
