@@ -31,7 +31,7 @@ const displayRetro = (reTro) => {
                               <div class="grid lg:grid-cols-5 gap-4">
                                 <div> 
                                     <div class="indicator">
-                                        <span class="indicator-item badge badge-secondary ${reTroAll.isActive?  "bg-green-800" : "bg-red-800" } ">  </span> 
+                                        <span class="indicator-item badge border-[green] badge-secondary ${reTroAll.isActive?  "bg-green-800" : "bg-red-800" } ">  </span> 
                                         <div class="grid w-32 h-32 bg-base-300 place-items-center  rounded-xl">  <img src="${reTroAll.image}" alt=""></div>
                                     </div>
                                 </div>

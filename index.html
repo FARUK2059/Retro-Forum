@@ -18,15 +18,17 @@
 
 </head>
 <body>
-    
+
     <!-- header section -->
     <header class="container mx-auto font-mulish  mt-6 p-8">
        <div>
-            <div class="navbar bg-base-100">
-                <div class="flex-1">
-                    <a class="btn btn-ghost text-4xl font-black text-[#12132D]">ReTro</a>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <div >
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <div class="tooltip" data-tip="Home">
                         <span><i class="fa-solid fa-house bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
                     </div>
@@ -39,10 +41,30 @@
                     <div class="tooltip" data-tip="Flag">
                         <span><i class="fa-regular fa-flag bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
                     </div>
-                    <button class="btn btn-active btn-primary m-3 rounded-full text-[20px] font-bold">Sign In</button>
-                </div>
-                
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-4xl font-black text-[#12132D]">ReTro</a>
             </div>
+            
+            <div class="navbar-end ">
+                <div class="hidden lg:flex">
+                    <div class="tooltip" data-tip="Home">
+                        <span><i class="fa-solid fa-house bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <div class="tooltip" data-tip="Edit">
+                        <span><i class="fa-solid fa-pen bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <div class="tooltip" data-tip="Add">
+                        <span><i class="fa-solid fa-user-plus bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                    <div class="tooltip" data-tip="Flag">
+                        <span><i class="fa-regular fa-flag bg-[#0307121A] border-solid p-4 rounded-[50%] m-3"></i></span>
+                    </div>
+                </div>
+                <button class="btn btn-active btn-primary m-3 rounded-full text-[20px] font-bold">Sign In</button>
+              
+            </div>
+          </div>
        </div>
     </header>
 
