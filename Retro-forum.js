@@ -116,11 +116,13 @@ const searchOption = () => {
     const searchHandelar = document.getElementById('search-Inpute');
     const searchText = document.getElementById('search-Inpute').value;
     console.log(searchText);
-    if (searchHandelar) {
+    if (searchText) {
         loadRetro(searchText);
     } 
     else{
         return alert('please Inpute category');
+        loaddingSpinner.classList.add('hidden');
+        
     }
     searchText.value = '';
 };
@@ -137,4 +139,4 @@ const toggleLoaddingSpinner = (isLoading) => {
     }
 };
 
-loadRetro ('comedy');
+loadRetro ('');

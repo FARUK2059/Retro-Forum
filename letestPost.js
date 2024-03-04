@@ -54,6 +54,4 @@ const displaylatestPost = (reTroLetestPost) => {
 
 }
 
-
-
 loadPost ();
