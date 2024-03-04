@@ -59,8 +59,8 @@
                             <h1 class="font-black text-6xl text-[#FFFFFF] ">Welcome to the <br> <span class="text-[#797DFC]">ReTro</span> Forum</h1>
                             <p class="text-[#FFFFFFCC]"> give your favorite talk to about your self , <br> you can understand </p>
                             <div class="flex mt-1">
-                                <input type="text" placeholder="Type here" class="input input-ghost w-full relative max-w-xs bg-white rounded-full" />
-                                <button class="btn btn-primary rounded-full absolute text-white font-medium ml-60">Search</button>
+                                <input id="search-Inpute" type="text" placeholder="Type your category" class="input input-ghost w-full relative max-w-xs bg-white rounded-full" />
+                                <button onclick="searchOption()" class="btn btn-primary rounded-full absolute text-white font-medium ml-60">Search</button>
                             </div>
                         </div>
                         <div class=" bg-[#FFFFFF] rounded-3xl m-16 p-10">
@@ -92,6 +92,13 @@
             <div class="grid text-center items-center justify-center ">
                 <h1 class="text-4xl text-[#12132D] font-black ">Let’s Discuss</h1>
                 <p class="text-[#12132D99] font-normal mt-2">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            </div>
+        </section>
+
+        <!-- Loaddign section -->
+        <section >
+            <div id="loadding-Spinner" class="text-center my-48 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
             </div>
         </section>
 

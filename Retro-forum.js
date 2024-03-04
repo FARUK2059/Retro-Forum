@@ -1,5 +1,5 @@
-const loadRetro = async ( ) => {
-    const res = await fetch ('https://openapi.programming-hero.com/api/retro-forum/posts');
+const loadRetro = async ( category ) => {
+    const res = await fetch (`https://openapi.programming-hero.com/api/retro-forum/posts?category=${category}`);
     const data = await res.json();
     // console.log(data);
     const reTro = data.posts;
@@ -9,14 +9,16 @@ const loadRetro = async ( ) => {
 }
 
 const displayRetro = (reTro) => {
-        console.log(reTro);
+        // console.log(reTro);
 
         // step 1 : Link ID
         const reTroDiscuss = document.getElementById('discussContainer');
 
+        reTroDiscuss.textContent = '';
+
 
         reTro.forEach ( reTroAll => {
-            console.log(reTroAll);
+            // console.log(reTroAll);
 
             // step 2 : Creat a new div
             const discussCard = document.createElement('div');
@@ -35,7 +37,7 @@ const displayRetro = (reTro) => {
                                 </div>
                                 <div class="grid lg:col-span-4">
                                     <div class="flex text-[#12132DCC]">
-                                        <h3>${reTroAll.category}</h3>
+                                        <h3>#${reTroAll.category}</h3>
                                         <h3 class="ml-10">${reTroAll.author.name}</h3>
                                     </div>
                                     <h1 class="text-[#12132D] font-bold text-xl"> ${reTroAll.title}</h1>
@@ -74,6 +76,11 @@ const displayRetro = (reTro) => {
             // step 4 : set append child
             reTroDiscuss.appendChild(discussCard);
 
+            //  hide Loading
+            setTimeout(() => {
+                toggleLoaddingSpinner(false);
+            }, 2000);
+
         });
 
 };
@@ -81,7 +88,7 @@ const displayRetro = (reTro) => {
 // count section
 let clickItem = 0;
 const play = (title, view) =>{
-console.log(title, view);
+// console.log(title, view);
 clickItem++;
 document.getElementById('click-count').innerText = clickItem;
 
@@ -103,4 +110,31 @@ titleCount.appendChild(newDiv);
 
 };
 
-loadRetro ();
+// search button section
+const searchOption = () => {
+    toggleLoaddingSpinner (true);
+    const searchHandelar = document.getElementById('search-Inpute');
+    const searchText = document.getElementById('search-Inpute').value;
+    console.log(searchText);
+    if (searchHandelar) {
+        loadRetro(searchText);
+    } 
+    else{
+        return alert('please Inpute category');
+    }
+    searchText.value = '';
+};
+
+
+// load spinner
+const toggleLoaddingSpinner = (isLoading) => {
+    const loaddingSpinner = document.getElementById('loadding-Spinner');
+    if(isLoading){
+        loaddingSpinner.classList.remove('hidden');
+    }
+    else {
+        loaddingSpinner.classList.add('hidden');
+    }
+};
+
+loadRetro ('comedy');
